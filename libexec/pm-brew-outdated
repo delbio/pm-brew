@@ -10,5 +10,5 @@ set -e
 
 pm-brew _exec-action-over-all "brew:brew cask:mas" outdated
 
-echo "brew bundle check"
-brew bundle check
+#echo "brew bundle check"
+#brew bundle check
