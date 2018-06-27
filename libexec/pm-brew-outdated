@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#
+# Summary: Show out of date installed packages
+#
+#   @see https://github.com/Homebrew/homebrew-bundle
+# Usage: pm outdated
+#
+
+set -e
+
+pm-brew _exec-action-over-all "brew:brew cask:mas" outdated
+
+echo "brew bundle check"
+brew bundle check

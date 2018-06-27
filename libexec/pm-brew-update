@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+#
+# Summary:
+#    Update all outdated packages
+#
+#    brew cask reinstall unity web-player as sudo all time
+#
+#    @see: https://github.com/mas-cli/mas
+#
+# Usage: pm-brew update
+#
+
+set -e
+
+brew update
+brew upgrade
+
+brew cask upgrade
+for p in $(brew cask list); do echo "Update "$p" ..."; brew cask upgrade $p; done
+
+mas upgrade

@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#
+# Summary: Display all installed packages
+#
+# Usage: pm-brew list
+
+set -e
+
+pm-brew _exec-action-over-all "brew:brew cask:mas" list
