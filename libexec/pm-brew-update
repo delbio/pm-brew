@@ -15,7 +15,7 @@ set -e
 brew update
 brew upgrade
 
-brew cask upgrade
-for p in $(brew cask list); do echo "Update "$p" ..."; brew cask upgrade $p; done
+brew upgrade --cask
+#for p in $(brew list --cask); do echo "Update "$p" ..."; brew upgrade --cask $p; done
 
 mas upgrade
