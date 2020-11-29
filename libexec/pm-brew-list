@@ -6,4 +6,10 @@
 
 set -e
 
-pm-brew _exec-action-over-all "brew:brew cask:mas" list
+
+echo "brew"
+brew list
+echo "cask"
+brew list --cask
+echo "mas"
+mas list

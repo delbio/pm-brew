@@ -8,7 +8,12 @@
 
 set -e
 
-pm-brew _exec-action-over-all "brew:brew cask:mas" outdated
+echo "brew"
+brew outdated
+echo "cask"
+brew outdated --cask
+echo "mas"
+mas outdated
 
 #echo "brew bundle check"
 #brew bundle check
